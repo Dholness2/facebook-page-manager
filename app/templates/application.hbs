@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember</h2>
+<div> 
+<h2 id="title">Welcome to Page Manager</h2>
+</div>
+{{#if session.isAuthenticated}}
+Logged in as {{session.currentUser.displayName}}
+  <button {{action "signOut"}}>Sign out</button>
+{{else}}
+  <button {{action "signIn" "facebook"}}>Sign in with Twitter</button>
+{{/if}}
 
-{{outlet}}

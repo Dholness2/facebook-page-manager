@@ -6,6 +6,27 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    torii: {
+      sessionServiceName: 'session',
+      providers: {
+        'facebook-connect': {
+          appId: '1056050657812944',
+          scope: 'email,user_birthday'
+      }
+     }
+   },
+    firebase: {
+      apiKey: "AIzaSyAho702zgbm0h2eRrKRv3rjG-_RWoiNOK8",
+      authDomain: "facebookmanager-33ef2.firebaseapp.com",
+      databaseURL: "https://facebookmanager-33ef2.firebaseio.com",
+      storageBucket: "facebookmanager-33ef2.appspot.com",
+    },
+    FB: {
+      appId: '1056050657812944',
+      version: 'v2.6',
+      xfbml: true
+    }, 
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

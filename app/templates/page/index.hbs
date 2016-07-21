@@ -1,0 +1,7 @@
+<h2> Your Accounts </h2>
+<ul>
+  {{#each model as |account|}}
+  <p> {{#link-to "page/show" account.page}} {{account.page.name}} {{/link-to}}</p>
+  {{/each}}
+</ul>
+{{outlet}}

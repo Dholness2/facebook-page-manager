@@ -1,0 +1,19 @@
+{{#paper-card as |card|}}
+  {{#card.content}}
+    {{#paper-form as |form|}}
+    {{form.input 
+      label="message" 
+      type="message" 
+      value=model.message 
+      onChange=(action (mut model.message))}}
+    <p>
+      {{#paper-checkbox value=model.is_published onChange=(action (mut model.is_published))}}
+        Publish Post
+      {{/paper-checkbox}}
+    </p>
+  {{#paper-button  onClick=(action "save")}}
+    Submit New Edit
+  {{/paper-button}}
+  {{/paper-form}}
+ {{/card.content}}
+{{/paper-card}}

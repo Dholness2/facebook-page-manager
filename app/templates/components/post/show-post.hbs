@@ -1,0 +1,15 @@
+{{#paper-item class="md-3-line"}}
+  <div class="md-list-item-text">
+    <p>{{model.message}}</p>
+    <h4>{{if model.is_published "State: Published" "State: unpublished"}}</h4>
+     <p> {{model.insight.values}}</p>    
+{{# if model.is_published}}
+      <h4> {{#link-to "post.edit" model}} Edit {{/link-to}} </h4>
+    {{else}}
+      <h4> {{#link-to "post/edit-unpublished" model}} Edit {{/link-to}} </h4>
+    {{/if}}
+  </div>
+  {{#paper-button iconButton=true class="md-secondary" onClick=(action "deletePost")}}
+    {{paper-icon "clear" raised=true warn=true}}
+  {{/paper-button}}
+{{/paper-item}}

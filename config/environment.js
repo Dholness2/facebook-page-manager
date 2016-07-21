@@ -12,9 +12,9 @@ module.exports = function(environment) {
         'facebook-connect': {
           appId: '1056050657812944',
           scope: 'email,user_birthday'
+        }
       }
-     }
-   },
+    },
     firebase: {
       apiKey: "AIzaSyAho702zgbm0h2eRrKRv3rjG-_RWoiNOK8",
       authDomain: "facebookmanager-33ef2.firebaseapp.com",

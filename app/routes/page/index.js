@@ -1,5 +1,4 @@
 import Ember from 'ember';
-
 export default Ember.Route.extend({
 
   beforeModel() {
@@ -7,6 +6,6 @@ export default Ember.Route.extend({
   },
 
   model() {
-    return  this.get('store').query('account', { filter: { userId: this.get('currentUser.uId')} });
+    return this.store.findAll('account');
   }
 });

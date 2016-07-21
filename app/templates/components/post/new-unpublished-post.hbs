@@ -1,0 +1,10 @@
+{{#paper-card as |card|}}
+  {{#card.content}}
+    {{#paper-form as |form|}}
+      {{form.input label="message" type="email" value=model.post.message onChange=(action (mut model.post.message))}}
+      {{#paper-button  onClick=(action "save")}}
+        Submit
+      {{/paper-button}}
+    {{/paper-form}}
+  {{/card.content}}
+{{/paper-card}}

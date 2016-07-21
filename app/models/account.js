@@ -4,5 +4,7 @@ import Model from 'ember-data/model';
 
 export default Model.extend({
   name: attr('string'),
-  category: attr('string')
+  category: attr('string'),
+  access_token: attr('string'),
+  page: belongsTo('page', { async: true })
 });

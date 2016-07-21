@@ -1,0 +1,18 @@
+<p>{{#link-to "post/new" model.id }} create new Post {{/link-to}}</p>
+<p>{{#link-to "post/new-unpublished" model.id }} create new unpublished Post {{/link-to}}</p>
+
+<h2>Page Posts</h2>
+{{#paper-list}}
+  {{#each model.posts as |post|}}
+    {{post/show-post model=post}}
+    {{paper-divider}}
+  {{/each}}
+{{/paper-list}}
+
+<h2>Unpublsihed Posts</h2>
+{{#paper-list}}
+  {{#each model.unpublished_posts as |post|}}
+    {{post/show-post model=post}}
+    {{paper-divider}}
+  {{/each}}
+{{/paper-list}}
